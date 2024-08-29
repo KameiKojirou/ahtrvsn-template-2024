@@ -1,4 +1,6 @@
 ---
+import Breadcrumbs from "@/lib/components/Breadcrumbs.astro"
+import NavBar from "@/lib/components/NavBar.astro"
 import Title from "@/lib/components/Title.astro"
 let { title } = Astro.props
 ---
@@ -11,6 +13,11 @@ let { title } = Astro.props
     <title>{title}</title>
 </head>
 <body>
+    <NavBar>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+    </NavBar>
+    <Breadcrumbs />
     <slot />
 </body>
 </html>
